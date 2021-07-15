@@ -1,0 +1,838 @@
+// Config fonts
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap");
+
+// Clamp variables
+$clamp1520: clamp(1rem, 2.5vw, 1.333rem);
+$clamp1523: clamp(1rem, 2.5vw, 1.533rem);
+$clamp1525: clamp(1rem, 2.5vw, 1.667rem);
+$clamp1530: clamp(1rem, 2vw, 2rem);
+$clamp2030: clamp(1.333rem, 2vw, 2rem);
+$clamp2530: clamp(1.667rem, 2.5vw, 2rem);
+$clamp3060: clamp(2rem, 5vw, 4rem);
+$clamp4080: clamp(2.667rem, 5vw, 5.333rem);
+
+.fs {
+	&-1520 {
+		font-size: 1rem;
+		min-height: 0.00001vw;
+		font-size: $clamp1520;
+	}
+	&-1523 {
+		font-size: 1rem;
+		min-height: 0.00001vw;
+		font-size: $clamp1523;
+	}
+	&-1525 {
+		font-size: 1rem;
+		min-height: 0.00001vw;
+		font-size: $clamp1525;
+	}
+	&-1530 {
+		font-size: 1rem;
+		min-height: 0.00001vw;
+		font-size: $clamp1530;
+	}
+	&-2030 {
+		font-size: 1.333rem;
+		min-height: 0.00001vw;
+		font-size: $clamp2030;
+	}
+	&-2530 {
+		font-size: 1.667rem;
+		min-height: 0.00001vw;
+		font-size: $clamp2530;
+	}
+	&-3060 {
+		font-size: 2rem;
+		min-height: 0.00001vw;
+		font-size: $clamp3060;
+	}
+	&-4080 {
+		font-size: 2.667rem;
+		min-height: 0.00001vw;
+		font-size: $clamp4080;
+	}
+}
+
+// Font-weight
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+
+.fw {
+	&-extra-light {
+		font-weight: $fw-extra-light;
+	}
+	&-light {
+		font-weight: $fw-light;
+	}
+	&-regular {
+		font-weight: $fw-regular;
+	}
+	&-medium {
+		font-weight: $fw-medium;
+	}
+}
+
+// Colors
+$clr-light: #ffffff;
+$clr-gray-1: #f0f0f0;
+$clr-gray-2: #eaeaea;
+$clr-gray-3: #d7d8d7;
+$clr-gray-4: #697179;
+$clr-gray-5: #2e353b;
+$clr-dark: #1a1d21;
+
+.clr {
+	&-light {
+		color: $clr-light;
+	}
+	&-gray-1 {
+		color: $clr-gray-1;
+	}
+	&-gray-2 {
+		color: $clr-gray-2;
+	}
+	&-gray-3 {
+		color: $clr-gray-3;
+	}
+	&-gray-4 {
+		color: $clr-gray-4;
+	}
+	&-gray-5 {
+		color: $clr-gray-5;
+	}
+	&-dark {
+		color: $clr-dark;
+	}
+}
+
+// Background-colors
+.bgc {
+	&-light {
+		background: $clr-light;
+	}
+	&-gray-1 {
+		background: $clr-gray-1;
+	}
+	&-gray-2 {
+		background: $clr-gray-2;
+	}
+	&-gray-3 {
+		background: $clr-gray-3;
+	}
+	&-gray-4 {
+		background: $clr-gray-4;
+	}
+	&-gray-5 {
+		background: $clr-gray-5;
+	}
+	&-dark {
+		background: $clr-dark;
+	}
+}
+
+// Styles for html tags
+html {
+	font-size: 15px;
+	&:focus-within {
+		scroll-behavior: smooth;
+	}
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "Kanit", sans-serif;
+	font-weight: $fw-light;
+	color: $clr-gray-5;
+	background: $clr-gray-1;
+	overflow-x: hidden;
+}
+
+h1 {
+	min-height: 0.00001vw;
+	font-size: 2.5rem;
+	font-size: $clamp4080;
+	font-weight: $fw-medium;
+	line-height: 1;
+}
+
+h2 {
+	min-height: 0.00001vw;
+	font-size: 2rem;
+	font-size: $clamp3060;
+	font-weight: $fw-light;
+	line-height: 1;
+}
+
+p {
+	min-height: 0.00001vw;
+	font-size: 1rem;
+	font-size: $clamp1530;
+	line-height: 1.334;
+	&.bgc-dark {
+		color: $clr-gray-2;
+	}
+}
+
+a {
+	min-height: 0.00001vw;
+	font-size: 1rem;
+	font-size: $clamp1525;
+	line-height: 1.334;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+	&.a-btn {
+		font-size: $clamp1520;
+		padding: 1em 2em;
+	}
+	&.a-gray-4 {
+		&:hover,
+		&:focus {
+			color: $clr-gray-4;
+		}
+	}
+	&.a-btn-light {
+		background: $clr-light;
+		color: $clr-dark;
+		border: 1px solid $clr-light;
+		transition: all 0.3s;
+		padding: 0.5em 1.5em;
+		&:hover,
+		&:focus {
+			background: $clr-gray-5;
+			color: $clr-light;
+		}
+	}
+	&.a-btn-dark {
+		background: $clr-dark;
+		color: $clr-light;
+		border: 1px solid $clr-dark;
+		transition: all 0.3s;
+		&:hover,
+		&:focus {
+			background: $clr-light;
+			color: $clr-dark;
+		}
+	}
+}
+
+sup {
+	min-height: 0.00001vw;
+	font-size: 1rem;
+	font-size: $clamp1525;
+}
+
+// Styles
+// Nav bar
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
+
+.nav-top-block {
+	min-width: 55em;
+}
+
+.project-desktop-header {
+	min-width: 35em;
+}
+
+.bgi-mobile {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/nav-mobile-bgi-01.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 10em;
+	width: 100%;
+	&.project-page-nav {
+		height: 12em;
+	}
+}
+
+.row-mobile-header {
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 3.334em;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.nav-header-mobile {
+	padding-left: 0;
+}
+
+.nav__div {
+	height: 11em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav__logo-img {
+	transform: translateY(-5px);
+}
+
+.nav__ul {
+	display: flex;
+	list-style-type: none;
+	padding-left: 0;
+	margin-right: 1em;
+}
+
+.nav__ul-li {
+}
+
+.nav__ul-li-a {
+	font-size: $clamp1523;
+	color: $clr-gray-5;
+	&:hover,
+	&:focus {
+		color: $clr-gray-5;
+	}
+}
+
+.header-close-a {
+	color: $clr-dark;
+	&:hover,
+	&:focus {
+		color: $clr-dark;
+	}
+}
+
+// bottom mobile navigations
+.navigation-bottom {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 6.333em;
+	background: $clr-light;
+	display: flex;
+	align-items: center;
+	& .navigation-bottom__ul {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		list-style-type: none;
+		align-items: center;
+		padding-left: 0;
+		margin-bottom: 0;
+		border-bottom: 1px solid $clr-gray-3;
+		& .navigation-bottom__ul-li {
+			padding-bottom: 1em;
+			&.active {
+				border-bottom: 2px solid $clr-dark;
+				transform: translateY(1px);
+			}
+			& .navigation-bottom__ul-li-a {
+				font-size: 1rem;
+				font-size: $clamp1523;
+				color: $clr-gray-5;
+			}
+		}
+	}
+}
+
+// End nav bar
+// Header
+.header__background-image {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/home-main-mobile.png");
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-color: $clr-light;
+	background-size: cover;
+	min-height: 100vh;
+	width: 100vw;
+}
+
+.header__image-overlay {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translateY(1px);
+}
+
+.header-text-mobile {
+	position: absolute;
+	bottom: 1.5em;
+	left: 0;
+}
+
+.main-future-title-mobile {
+	width: max-content;
+	text-align: center;
+}
+
+.header-text {
+	position: absolute;
+	bottom: 6em;
+	left: 0;
+	display: flex;
+}
+
+.a-scroll-down {
+	color: $clr-gray-2;
+	&:hover,
+	&:focus {
+		color: $clr-gray-2;
+	}
+}
+// End header
+
+// Projecten
+.about-us-container,
+.projects-container {
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+.project-main-text {
+	padding-top: 9em;
+}
+
+.project-main-paragraph {
+	padding-top: 3em;
+}
+
+.light-gray-1-bgc-div {
+	height: 9em;
+	background: $clr-gray-1;
+	&.h-11em {
+		height: 11em;
+	}
+}
+
+.light-gray-3-bgc-div {
+	height: 15em;
+	background: $clr-gray-3;
+}
+
+.h1-projects {
+	color: $clr-gray-4;
+	margin-bottom: 0.5em;
+	line-height: 1;
+}
+
+.projects-sup {
+	vertical-align: super;
+}
+
+.bgi-dark-overlay {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/bgi-first-project-01.svg");
+	background-repeat: no-repeat;
+	transform: translateY(-1px);
+}
+
+.bgi-dark-overlay-mobile {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/bgi-first-project-01-01.svg");
+	background-repeat: no-repeat;
+}
+
+.bgi-project {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/flat-building.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: $clr-dark;
+	background-size: cover;
+	min-height: 250px;
+	width: 100%;
+	position: relative;
+	transition: transform 0.3s;
+
+	&::after {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(26, 29, 33, 0.6);
+		content: "";
+		display: block;
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition: opacity 0.3s;
+	}
+}
+
+.plus-symbol {
+	position: absolute;
+	left: calc(50% - 15px);
+	top: calc(50% - 15px);
+	width: 30px;
+	height: 30px;
+	opacity: 0;
+}
+
+.project-detail-inner {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	position: relative;
+	overflow: hidden;
+
+	&:hover {
+		.bgi-project {
+			transform: scale(1.2);
+
+			&::after {
+				opacity: 1;
+			}
+		}
+		.a-btn-light {
+			background: $clr-gray-5;
+			color: $clr-light;
+		}
+		.plus-symbol {
+			opacity: 1;
+		}
+	}
+}
+
+.bgi-projects-mobile {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/bgi-projects-mobile.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	min-height: 400px;
+	width: 100%;
+	position: relative;
+	margin-top: 2.334em;
+	&.first-project {
+		margin-top: 0;
+	}
+	& .bgi-projects-mobile-text {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: $clr-gray-5;
+		display: flex;
+		flex-direction: column;
+		padding: 1.5em 1em;
+	}
+}
+
+// Team
+// Mobile slider
+.slick-slide {
+	padding-left: 0.334em;
+	padding-right: 0.334em;
+	margin-bottom: 3em;
+}
+
+.slick-dots {
+	display: flex;
+	padding-left: calc(2.333em - 0.167em);
+	padding-right: calc(2.333em - 0.167em);
+	& li {
+		width: 25%;
+		margin-left: 0;
+		margin-right: 0;
+		border-bottom: 1px solid $clr-gray-3;
+		& button {
+			&::before {
+				content: "";
+			}
+		}
+	}
+	& .slick-active {
+		border-bottom: 2px solid $clr-dark;
+		transform: translateY(0.5px);
+	}
+}
+// End mobile slider
+
+.bgm-div-text {
+	min-height: 8em;
+}
+
+.bgi-building {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/flat-building.png");
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-color: $clr-light;
+	background-size: cover;
+	min-height: 370px;
+	width: 100%;
+}
+
+.bgi-contact {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/contact-image-project-page.png");
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	background-color: $clr-light;
+	background-size: cover;
+	min-height: 370px;
+	width: 100%;
+}
+
+// Above footer
+.bgi-light-dark-diagonal {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/light-dark-diagonal.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: $clr-gray-3;
+}
+
+.bgi-gray-dark-diagonal {
+	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/gray-dark-diagonal.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: $clr-dark;
+}
+
+.project-interest-div {
+	min-height: 400px;
+}
+
+// Footer
+
+footer {
+	& a {
+		&.footer-a-light {
+			&:hover,
+			&:focus {
+				color: $clr-light;
+			}
+		}
+		&:hover,
+		&:focus {
+			color: $clr-gray-4;
+		}
+	}
+}
+
+.top-footer-mobile {
+	padding-top: 6em;
+	padding-bottom: 4em;
+}
+
+.bottom-footer-mobile {
+	padding-bottom: 3em;
+}
+
+// Single project page
+.project-details-div {
+	padding: 3em 0 6em;
+	margin-top: 4em;
+}
+
+.title-left-text-right {
+	margin: 4em 0;
+}
+
+.old-new-situation-div {
+	padding-top: 2em;
+}
+
+.situation-overlay {
+	position: absolute;
+	bottom: 1em;
+	left: 1.5em;
+	width: max-content;
+	padding: 0.75em 1.5em;
+}
+
+// Container fluid left en right padding
+.container-fluid {
+	padding-right: 2.333em;
+	padding-left: 2.333em;
+}
+
+@media only screen and (min-width: 576px) {
+}
+
+@media only screen and (min-width: 768px) {
+	.bgi-mobile {
+		height: 20em;
+	}
+
+	.header__image-overlay {
+		transform: translateY(2px);
+	}
+
+	#about-us {
+		// transform: translateY(1px);
+	}
+
+	.slick-dots {
+		display: flex;
+		padding-left: calc(3.333em - 0.167em);
+		padding-right: calc(3.333em - 0.167em);
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	a {
+		&.a-btn {
+			padding: 0.3em 1em;
+		}
+	}
+	.container-fluid {
+		padding-right: 3.333em;
+		padding-left: 3.333em;
+	}
+
+	.header__background-image {
+		background-image: url("/future-vastgoed/wp-content/uploads/2021/07/home-main.png");
+	}
+
+	header {
+		width: calc(50% - 1em);
+		&.project-width {
+			width: 33.34%;
+		}
+	}
+	.bgi-project {
+		min-height: 400px;
+	}
+
+	#projects {
+		// transform: translateY(-1px);
+	}
+
+	#project2,
+	#project3 {
+		& .bgi-project {
+			height: 400px;
+		}
+	}
+
+	#project1,
+	#project4 {
+		& .bgi-project {
+			height: 500px;
+		}
+	}
+	.about-us-container,
+	.projects-container {
+		padding-top: 15em;
+	}
+	.project-main-paragraph {
+		padding-top: 9em;
+	}
+
+	.light-gray-1-bgc-div {
+		height: 15em;
+	}
+
+	.half-bgc-light-gray-3 {
+		background: linear-gradient(180deg, $clr-gray-1 50%, $clr-gray-3 50%);
+	}
+
+	.bgi-building {
+		min-height: 650px;
+
+		max-width: calc(50% - 1em);
+		// padding-right: 0;
+		// margin-right: -1em;
+	}
+
+	.bgi-dark-overlay {
+		background-image: url("/future-vastgoed/wp-content/uploads/2021/07/dark-bg-img-01.svg");
+		// transform: translateY(-2px);
+	}
+
+	.title-left-text-right {
+		margin: 20em 0;
+	}
+
+	.project-details-div {
+		padding-top: 8em;
+		padding-bottom: 16em;
+		margin-top: 16em;
+		// transform: translateY(1px);
+	}
+
+	.bgi-project {
+		// background-size: 100%;
+	}
+
+	.bgi-contact {
+		min-height: 650px;
+	}
+
+	.col-border-top {
+		border-top: 1px solid $clr-gray-1;
+		padding-left: 0;
+		padding-top: 2.5em;
+		padding-bottom: 2em;
+	}
+
+	.col-border-bottom {
+		border-bottom: 1px solid $clr-gray-1;
+	}
+
+	.interesse-div {
+		// transform: translateY(2px);
+	}
+
+	footer {
+		// transform: translateY(1px);
+	}
+
+	.contact-right-div {
+		min-width: calc(50% + 1em);
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	a {
+		&.a-btn {
+			padding: 0.6em 2.8em;
+		}
+	}
+}
+
+// Media queries max width
+@media only screen and (max-width: 575px) {
+}
+@media only screen and (max-width: 767px) {
+	.main-header {
+		transform: translateY(-6.333em);
+	}
+
+	footer {
+		transform: translateY(-6.333em);
+	}
+}
+@media only screen and (max-width: 991px) {
+	.container-fluid {
+		&.no-px-small {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+	}
+
+	#team {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.no-mx-mobile {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.detail-above-description {
+		&.first-detail {
+			padding-top: 0.667em;
+			border-top: 1px solid $clr-light;
+		}
+	}
+
+	.description-border {
+		padding-bottom: 0.667em;
+		border-bottom: 1px solid $clr-light;
+		margin-bottom: 0.667em;
+	}
+}
+@media only screen and (max-width: 1199px) {
+}
