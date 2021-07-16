@@ -8,7 +8,7 @@ jQuery(document).ready(function ($) {
 					$(this.element).removeClass("animation-finished");
 				}
 			},
-			{ offset: "50%" }
+			{ offset: "90%" }
 		);
 	});
 

@@ -133,6 +133,49 @@ $clr-dark: #1a1d21;
 	}
 }
 
+// Waypoint styles
+.waypoint-animation {
+	.rise-animation,
+	.rise-animation-alt,
+	.slide-left-animation,
+	.slide-right-animation,
+	.fade-animation {
+		opacity: 0;
+		transition: opacity 1s, transform 1s;
+	}
+
+	.rise-animation {
+		transform: translate(0, 5%);
+	}
+
+	.rise-animation-alt {
+		opacity: 1;
+		transform: translate(0, 5%);
+	}
+
+	.slide-left-animation {
+		transform: translate(10%);
+	}
+
+	.slide-right-animation {
+		transform: translate(-10%);
+	}
+
+	&.animation-finished {
+		opacity: 1;
+		transform: translate(0);
+
+		.rise-animation,
+		.rise-animation-alt,
+		.slide-left-animation,
+		.slide-right-animation,
+		.fade-animation {
+			opacity: 1;
+			transform: translate(0);
+		}
+	}
+}
+
 // Styles for html tags
 html {
 	font-size: 15px;
@@ -608,7 +651,7 @@ footer {
 			&:hover,
 			&:focus,
 			&:active {
-				color: $clr-light;
+				color: $clr-gray-4;
 			}
 		}
 		&:hover,

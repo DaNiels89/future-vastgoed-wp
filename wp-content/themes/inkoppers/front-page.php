@@ -124,18 +124,20 @@ get_header();
         </div>
     </div>
 
-    <div
-        tabindex="-1"
-        id="about-us"
-        class="container-fluid bgc-dark about-us-container"
-    >
-        <div class="row">
-            <div tabindex="-1" class="col-lg-6 offset-lg-3">
-                <?php if ($textDarkBackground): ?>
-                    <p class="bgc-dark text-dark-background">
-                        <?php echo $textDarkBackground; ?>
-                    </p>
-                <?php endif; ?>
+    <div class="waypoint-animation">
+        <div
+            tabindex="-1"
+            id="about-us"
+            class="container-fluid bgc-dark about-us-container"
+        >
+            <div class="row">
+                <div tabindex="-1" class="col-lg-6 offset-lg-3">
+                    <?php if ($textDarkBackground): ?>
+                        <p class="bgc-dark rise-animation">
+                            <?php echo $textDarkBackground; ?>
+                        </p>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
@@ -148,7 +150,16 @@ get_header();
         <div class="row">
             <div class="col-lg-5 offset-lg-1">
                 <h1 class="h1-projects fs-4080 fw-medium mb-0">
-                    Projecten <sup class="projects-sup fs-1525 fw-light">4</sup>
+                    Projecten 
+                    <sup class="projects-sup fs-1525 fw-light">
+                        <?php
+                            $args = array( 'post_type' => 'projects', 'order' => 'ASC' );
+                            $query = new WP_Query( $args );
+                            $count = $query->post_count;
+                            echo $count;
+                            wp_reset_query();
+                        ?>
+                    </sup>
                 </h1>
             </div>
             <div class="col-lg-5 d-flex align-items-end mt-3 mt-lg-0">
@@ -379,14 +390,16 @@ get_header();
         </div>
     </div>
 
-    <div class="container-fluid project-main-paragraph">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-                <?php if ($textUnderProjects): ?>
-                    <p class="">
-                        <?php echo $textUnderProjects; ?>
-                    </p>
-                <?php endif; ?>
+    <div class="waypoint-animation">
+        <div class="container-fluid project-main-paragraph">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 slide-right-animation">
+                    <?php if ($textUnderProjects): ?>
+                        <p class="">
+                            <?php echo $textUnderProjects; ?>
+                        </p>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
