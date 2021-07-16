@@ -182,7 +182,8 @@ a {
 	font-size: $clamp1525;
 	line-height: 1.334;
 	&:hover,
-	&:focus {
+	&:focus,
+	&:active {
 		text-decoration: none;
 	}
 	&.a-btn {
@@ -191,8 +192,10 @@ a {
 	}
 	&.a-gray-4 {
 		&:hover,
-		&:focus {
+		&:focus,
+		&:active {
 			color: $clr-gray-4;
+			transition: color 0.3s;
 		}
 	}
 	&.a-btn-light {
@@ -202,9 +205,11 @@ a {
 		transition: all 0.3s;
 		padding: 0.5em 1.5em;
 		&:hover,
-		&:focus {
+		&:focus,
+		&:active {
 			background: $clr-gray-5;
 			color: $clr-light;
+			transition: color 0.3s;
 		}
 	}
 	&.a-btn-dark {
@@ -213,9 +218,11 @@ a {
 		border: 1px solid $clr-dark;
 		transition: all 0.3s;
 		&:hover,
-		&:focus {
+		&:focus,
+		&:active {
 			background: $clr-light;
 			color: $clr-dark;
+			transition: color 0.3s;
 		}
 	}
 }
@@ -293,7 +300,8 @@ header {
 	font-size: $clamp1523;
 	color: $clr-gray-5;
 	&:hover,
-	&:focus {
+	&:focus,
+	&:active {
 		color: $clr-gray-5;
 	}
 }
@@ -301,7 +309,8 @@ header {
 .header-close-a {
 	color: $clr-dark;
 	&:hover,
-	&:focus {
+	&:focus,
+	&:active {
 		color: $clr-dark;
 	}
 }
@@ -382,7 +391,8 @@ header {
 .a-scroll-down {
 	color: $clr-gray-2;
 	&:hover,
-	&:focus {
+	&:focus,
+	&:active {
 		color: $clr-gray-2;
 	}
 }
@@ -598,13 +608,24 @@ footer {
 	& a {
 		&.footer-a-light {
 			&:hover,
-			&:focus {
+			&:focus,
+			&:active {
 				color: $clr-light;
 			}
 		}
 		&:hover,
-		&:focus {
+		&:focus,
+		&:active {
 			color: $clr-gray-4;
+			transition: color 0.3s;
+		}
+		&.clr-gray-4 {
+			&:hover,
+			&:focus,
+			&:active {
+				color: $clr-light;
+				transition: color 0.3s;
+			}
 		}
 	}
 }
