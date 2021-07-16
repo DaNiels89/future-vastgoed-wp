@@ -138,7 +138,7 @@
         <div class="row py-lg-5">
             <div tabindex="-1" class="col-lg-6 offset-lg-4 py-lg-5">
                 <?php if ($darkParagraph): ?>
-                    <p class="bgc-dark py-5 mb-lg-5">
+                    <p class="bgc-dark text-dark-background py-5 mb-lg-5">
                         <?php echo $darkParagraph; ?>
                     </p>
                 <?php endif; ?>

@@ -132,7 +132,7 @@ get_header();
         <div class="row">
             <div tabindex="-1" class="col-lg-6 offset-lg-3">
                 <?php if ($textDarkBackground): ?>
-                    <p class="bgc-dark">
+                    <p class="bgc-dark text-dark-background">
                         <?php echo $textDarkBackground; ?>
                     </p>
                 <?php endif; ?>
@@ -217,94 +217,84 @@ get_header();
         </div>
     </div>
 
-    <?php
-    $query = new WP_Query(['post_status' => 'publish', 'post_type' => 'projecten', 'orderby' => 'ID', 'order' => 'ASC']);
-    while ($query->have_posts()) : $query->the_post();
-
-        // WP post title ophalen
-        $title = get_the_title();
-
-        
-    ?>
-
-    <?php
-    endwhile;
-    wp_reset_query();
-    ?>
-
     <!-- Desktop projects -->
     <div class="bgi-dark-overlay pt-5 d-none d-lg-block">
         <div class="container-fluid">
             <div class="row">
                 <?php
                     $query = new WP_Query(['post_status' => 'publish', 'post_type' => 'projects', 'orderby' => 'ID', 'order' => 'ASC']);
+                    $i = 0;
                     while ($query->have_posts()) : $query->the_post();
                 ?>
-
-                <div class="col-lg-5 offset-lg-1" onclick="location.href='<?php the_permalink(); ?>';" style="cursor: pointer">
-                    <div class="project-detail-inner" id="project1">
-                        <div class="col bgi-project"></div>
-                        <img src="/future-vastgoed/wp-content/uploads/2021/07/plus-symbol.svg" alt="" class="plus-symbol" />
-                        <div class="col bgc-gray-5 py-4 px-5">
-                            <div class="row">
-                                <div class="col-lg-6 d-flex flex-column px-0 px-lg-3">
-                                    <span class="clr-light fs-2530 fw-extra-light"
-                                        ><?php the_title(); ?></span
+                    <?php if ($i % 2 == 0): ?>
+                        <div class="col-lg-5 offset-lg-1">
+                    <?php elseif ($i % 2 == 1): ?>
+                        <div class="col-lg-5">
+                    <?php endif; ?>   
+                        <div class="project-detail-inner" id="project<?php echo $i; ?>" onclick="location.href='<?php the_permalink(); ?>';" style="cursor: pointer">
+                            <div class="col bgi-project"></div>
+                            <img src="/future-vastgoed/wp-content/uploads/2021/07/plus-symbol.svg" alt="" class="plus-symbol" />
+                            <div class="col bgc-gray-5 py-4 px-5">
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex flex-column px-0 px-lg-3">
+                                        <span class="clr-light fs-2530 fw-extra-light"
+                                            ><?php the_title(); ?></span
+                                        >
+                                        <span class="clr-light fs-1520 fw-extra-light"
+                                            ><?php the_field("project_home_subtitle"); ?></span
+                                        >
+                                    </div>
+                                    <div
+                                        class="
+                                            col-6
+                                            d-flex
+                                            align-items-center
+                                            justify-content-end
+                                        "
                                     >
-                                    <span class="clr-light fs-1520 fw-extra-light"
-                                        >Project detail</span
-                                    >
-                                </div>
-                                <div
-                                    class="
-                                        col-6
-                                        d-flex
-                                        align-items-center
-                                        justify-content-end
-                                    "
-                                >
-                                    <a
-                                        href="#"
-                                        class="a-btn a-btn-light rounded-pill d-none d-xl-block"
-                                        >Nieuw project</a
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-detail-inner" id="project2">
-                        <div class="col bgi-project"></div>
-                        <img src="/future-vastgoed/wp-content/uploads/2021/07/plus-symbol.svg" alt="" class="plus-symbol" />
-                        <div class="col bgc-gray-5 py-4 px-5">
-                            <div class="row">
-                                <div class="col-lg-6 d-flex flex-column px-0 px-lg-3">
-                                    <span class="clr-light fs-2530 fw-extra-light"
-                                        >Projectnaam</span
-                                    >
-                                    <span class="clr-light fs-1520 fw-extra-light"
-                                        >Project detail</span
-                                    >
-                                </div>
-                                <div
-                                    class="
-                                        col-6
-                                        d-flex
-                                        align-items-center
-                                        justify-content-end
-                                    "
-                                >
-                                    <a
-                                        href="#"
-                                        class="a-btn a-btn-light rounded-pill d-none d-xl-block"
-                                        >Nieuw project</a
-                                    >
+                                        <a
+                                            href="#"
+                                            class="a-btn a-btn-light rounded-pill d-none d-xl-block"
+                                            >Nieuw project</a
+                                        >
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                
+
+                        <!-- <div class="project-detail-inner" id="project2">
+                            <div class="col bgi-project"></div>
+                            <img src="/future-vastgoed/wp-content/uploads/2021/07/plus-symbol.svg" alt="" class="plus-symbol" />
+                            <div class="col bgc-gray-5 py-4 px-5">
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex flex-column px-0 px-lg-3">
+                                        <span class="clr-light fs-2530 fw-extra-light"
+                                            >Projectnaam</span
+                                        >
+                                        <span class="clr-light fs-1520 fw-extra-light"
+                                            >Project detail</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="
+                                            col-6
+                                            d-flex
+                                            align-items-center
+                                            justify-content-end
+                                        "
+                                    >
+                                        <a
+                                            href="#"
+                                            class="a-btn a-btn-light rounded-pill d-none d-xl-block"
+                                            >Nieuw project</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                 </div>
-                <div class="col-lg-5">
+                <!-- <div class="col-lg-5">
                     <div class="project-detail-inner" id="project3">
                         <div class="col bgi-project"></div>
                         <img src="/future-vastgoed/wp-content/uploads/2021/07/plus-symbol.svg" alt="" class="plus-symbol" />
@@ -335,39 +325,39 @@ get_header();
                             </div>
                         </div>
                     </div>
-
                     <div class="project-detail-inner" id="project4">
                         <div class="col bgi-project"></div>
                         <img src="/future-vastgoed/wp-content/uploads/2021/07/plus-symbol.svg" alt="" class="plus-symbol" />
-                        <div class="col bgc-gray-5 py-4 px-5">
-                            <div class="row">
-                                <div class="col-lg-6 d-flex flex-column px-0 px-lg-3">
-                                    <span class="clr-light fs-2530 fw-extra-light"
-                                        >Projectnaam</span
+                            <div class="col bgc-gray-5 py-4 px-5">
+                                <div class="row">
+                                    <div class="col-lg-6 d-flex flex-column px-0 px-lg-3">
+                                        <span class="clr-light fs-2530 fw-extra-light"
+                                            >Projectnaam</span
+                                        >
+                                        <span class="clr-light fs-1520 fw-extra-light"
+                                            >Project detail</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="
+                                            col-6
+                                            d-flex
+                                            align-items-center
+                                            justify-content-end
+                                        "
                                     >
-                                    <span class="clr-light fs-1520 fw-extra-light"
-                                        >Project detail</span
-                                    >
-                                </div>
-                                <div
-                                    class="
-                                        col-6
-                                        d-flex
-                                        align-items-center
-                                        justify-content-end
-                                    "
-                                >
-                                    <a
-                                        href="#"
-                                        class="a-btn a-btn-light rounded-pill d-none d-xl-block"
-                                        >Nieuw project</a
-                                    >
+                                        <a
+                                            href="#"
+                                            class="a-btn a-btn-light rounded-pill d-none d-xl-block"
+                                            >Nieuw project</a
+                                        >
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div>  -->
                 <?php
+                    $i++;
                     endwhile;
                     wp_reset_query();
                 ?>
