@@ -26,8 +26,10 @@ function enqueue_scripts()
     wp_enqueue_style("styles-css", get_stylesheet_directory_uri() . "/css/styles.min.css", [], $version);
 
     wp_enqueue_script("jquery-js", get_stylesheet_directory_uri() . "/js/jquery-3.5.1.min.js", [], $version);
+    wp_enqueue_script("smooth-scroll", get_stylesheet_directory_uri() . "/js/smooth-scroll.polyfills.min.js", [], $version);
     wp_enqueue_script("bootstrap-js", get_stylesheet_directory_uri() . "/js/bootstrap.bundle.min.js", [], $version);
     wp_enqueue_script("slick-js", get_stylesheet_directory_uri() . "/slick/slick.min.js", [], $version);
+    wp_enqueue_script("waypoints-js", get_stylesheet_directory_uri() . "/js/jquery.waypoints.js", [], $version);
     wp_enqueue_script("custom-js", get_stylesheet_directory_uri() . "/js/custom.js", [], $version);
 }
 

@@ -365,14 +365,16 @@ get_header();
         </div>
     </div>
 
-    <div class="container-fluid project-main-text">
-        <div class="row">
-            <div class="col-lg-7 offset-lg-1">
-                <?php if ($titleUnderProjects): ?>
-                    <h2 class="">
-                        <?php echo $titleUnderProjects; ?>
-                    </h2>
-                <?php endif; ?>
+    <div class="waypoint-animation">
+        <div class="container-fluid project-main-text">
+            <div class="row">
+                <div class="col-lg-7 offset-lg-1 slide-right-animation">
+                    <?php if ($titleUnderProjects): ?>
+                        <h2 class="">
+                            <?php echo $titleUnderProjects; ?>
+                        </h2>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

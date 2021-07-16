@@ -1,4 +1,17 @@
 jQuery(document).ready(function ($) {
+	$(".waypoint-animation").each(function () {
+		$(this).waypoint(
+			function (direction) {
+				if (direction == "down") {
+					$(this.element).addClass("animation-finished");
+				} else {
+					$(this.element).removeClass("animation-finished");
+				}
+			},
+			{ offset: "50%" }
+		);
+	});
+
 	$(".mobile-center-slider").slick({
 		arrows: false,
 		dots: true,
