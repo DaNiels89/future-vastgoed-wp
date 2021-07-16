@@ -476,6 +476,20 @@ header {
 	vertical-align: super;
 }
 
+.categories {
+	margin: 0;
+	padding: 0;
+	li {
+		cursor: pointer;
+		transition: color 0.3s;
+		&:hover,
+		&:focus,
+		&:active {
+			color: $clr-light;
+		}
+	}
+}
+
 .bgi-dark-overlay {
 	background-image: url("/future-vastgoed/wp-content/uploads/2021/07/bgi-first-project-01.svg");
 	background-repeat: no-repeat;

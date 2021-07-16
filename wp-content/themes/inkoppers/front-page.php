@@ -163,12 +163,24 @@ get_header();
                 </h1>
             </div>
             <div class="col-lg-5 d-flex align-items-end mt-3 mt-lg-0">
-                <a href="#" class="a-gray-4 fs-1525 clr-gray-4 mr-5"
+                <!-- <a href="#" class="a-gray-4 fs-1525 clr-gray-4 mr-5"
                     >Nieuwe projecten</a
                 >
                 <a href="#" class="a-gray-4 fs-1525 clr-gray-4"
                     >Lopende projecten</a
-                >
+                > -->
+                <ul class="list-unstyled categories">
+                    <li data-category="all" class="clr-gray-4 fs-1525 d-inline-block mr-5">Alle</li>
+                    <?php
+                        $categories = get_categories( array(
+                            'orderby' => 'name',
+                            'parent'  => 0
+                        ) );
+                        
+                        foreach ( $categories as $category ) { ?>
+                            <li data-category="<?php echo $category->slug; ?>" class="clr-gray-4 fs-1525 d-inline-block mr-5"><?php echo $category->name; ?></li>
+                    <?php } ?>                            
+                </ul>
             </div>
         </div>
     </div>
@@ -242,7 +254,7 @@ get_header();
                     <?php elseif ($i % 2 == 1): ?>
                         <div class="col-lg-5">
                     <?php endif; ?>   
-                        <div class="project-detail-inner" id="project<?php echo $i; ?>" onclick="location.href='<?php the_permalink(); ?>';" style="cursor: pointer">
+                        <div class="project-detail-inner item all <?php $categories = get_the_category(); if ( ! empty( $categories ) ) { ?><?php echo $categories[0]->slug; ?><?php } ?>" id="project<?php echo $i; ?>" onclick="location.href='<?php the_permalink(); ?>';" style="cursor: pointer">
                             <div class="col bgi-project"></div>
                             <img src="/future-vastgoed/wp-content/uploads/2021/07/plus-symbol.svg" alt="" class="plus-symbol" />
                             <div class="col bgc-gray-5 py-4 px-5">
@@ -255,20 +267,24 @@ get_header();
                                             ><?php the_field("project_home_subtitle"); ?></span
                                         >
                                     </div>
-                                    <div
-                                        class="
-                                            col-6
-                                            d-flex
-                                            align-items-center
-                                            justify-content-end
-                                        "
-                                    >
-                                        <a
-                                            href="#"
-                                            class="a-btn a-btn-light rounded-pill d-none d-xl-block"
-                                            >Nieuw project</a
+                                    <?php 
+                                        $categories = get_the_category();
+                                    if ( ! empty( $categories ) ) { ?>
+                                        <div
+                                            class="
+                                                col-6
+                                                d-flex
+                                                align-items-center
+                                                justify-content-end
+                                            "
                                         >
-                                    </div>
+                                            <a
+                                                href="#"
+                                                class="a-btn a-btn-light rounded-pill d-none d-xl-block"
+                                                ><?php echo $categories[0]->name; ?></a
+                                            >
+                                        </div>
+                                    <?php } ?>  
                                 </div>
                             </div>
                         </div>

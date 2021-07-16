@@ -12,6 +12,14 @@ jQuery(document).ready(function ($) {
 		);
 	});
 
+	$(".categories li").click(function () {
+		var category = $(this).data("category");
+		console.log(category);
+
+		$(".item").hide();
+		$(".item." + category).show();
+	});
+
 	$(".mobile-center-slider").slick({
 		arrows: false,
 		dots: true,
