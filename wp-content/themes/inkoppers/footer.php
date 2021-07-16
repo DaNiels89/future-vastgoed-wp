@@ -279,11 +279,20 @@ defined("ABSPATH") || exit;
             </div>
         </div>
     </footer>
+    
+    <?php endif; ?>
+    
 
+    
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<?php endif; ?>
-
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            offset: 80
+        });
+    </script>
 
 </body>
 </html> 

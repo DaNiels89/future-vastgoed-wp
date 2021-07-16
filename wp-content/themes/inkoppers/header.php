@@ -39,22 +39,22 @@ defined( "ABSPATH" ) || exit;
                     <div class="col-12">
                         <ul class="navigation-bottom__ul">
                             <li class="navigation-bottom__ul-li active">
-                                <a href="#about-us" class="navigation-bottom__ul-li-a"
+                                <a data-scroll href="#about-us" class="navigation-bottom__ul-li-a"
                                     >Over ons</a
                                 >
                             </li>
                             <li class="navigation-bottom__ul-li">
-                                <a href="#projects" class="navigation-bottom__ul-li-a"
+                                <a data-scroll href="#projects" class="navigation-bottom__ul-li-a"
                                     >Projecten</a
                                 >
                             </li>
                             <li class="navigation-bottom__ul-li">
-                                <a href="#team-div" class="navigation-bottom__ul-li-a"
+                                <a data-scroll href="#team-div" class="navigation-bottom__ul-li-a"
                                     >Team</a
                                 >
                             </li>
                             <li class="navigation-bottom__ul-li">
-                                <a href="#contact-div" class="navigation-bottom__ul-li-a"
+                                <a data-scroll href="#contact-div" class="navigation-bottom__ul-li-a"
                                     >Contact</a
                                 >
                             </li>
