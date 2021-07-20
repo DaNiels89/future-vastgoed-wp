@@ -2,7 +2,11 @@
     <?php while (have_rows("blocks")): the_row(); ?>
 
         <?php if (get_row_layout() == "padding"): ?>
-            <div class="padding"></div>
+            <?php
+                $bgc = get_sub_field("padding-background-color");
+            ?>
+
+            <div class="padding bgc-<?php echo $bgc;?>"></div>
 
         <?php elseif (get_row_layout() == "text_dark_background"): ?>
 
@@ -10,9 +14,9 @@
                 $text = get_sub_field("text");
             ?>
 
-            <div class="waypoint-animation">
+            <div tabindex="-1" id="about-us" class="waypoint-animation">
                 <div class="container-fluid bgc-dark">
-                    <div class="row py-lg-5">
+                    <div class="row py-lg-5 mg-top-1">
                         <div class="col-lg-6 offset-lg-4 py-lg-5 slide-right-animation">
                             <?php if ($text): ?>
                                 <p class="bgc-dark py-5 mb-lg-5">
@@ -25,7 +29,7 @@
             </div>
 
         <?php elseif (get_row_layout() == "image_partially_dark_background"): ?>
-
+            
             <?php
                 $imgDarkBG = get_sub_field("image_with_partially_dark_background");
             ?>
@@ -94,13 +98,44 @@
                 </div>
             </div>
 
+        <?php elseif (get_row_layout() == "image_no_padding_mobile"): ?>
+
+            <?php
+                $imgNoPaddingMobile = get_sub_field("image_no_padding_mobile");
+            ?>
+
+            <!-- Mobile image without padding -->
+            <div class="waypoint-animation">
+                <img
+                    src="<?php echo $imgNoPaddingMobile['sizes']['large']; ?>"
+                    alt="<?php echo $imgNoPaddingMobile['alt']; ?>"
+                    class="d-lg-none w-100 rise-animation"
+                />
+            </div>
+
+            <!-- Desktop image -->
+            <div class="waypoint-animation">
+                <div class="container-fluid d-none d-lg-block">
+                    <div class="row">
+                        <div class="col rise-animation">
+                            <img
+                                src="<?php echo $imgNoPaddingMobile['sizes']['large']; ?>"
+                                alt="<?php echo $imgNoPaddingMobile['alt']; ?>"
+                                class="w-100"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         <?php elseif (get_row_layout() == "two_images"): ?>
 
             <?php
                 $imageLeft = get_sub_field("image_left");
                 $imageLeftText = get_sub_field("image_left_text");
-                $imageRight = get_sub_field("right");
-                $imageLeftText = get_sub_field("image_right_text");
+                $imageRight = get_sub_field("image_right");
+                $imageRightText = get_sub_field("image_right_text");
             ?>
 
             <div class="waypoint-animation">
@@ -156,14 +191,6 @@
 
             <?php
                 $detailsTitle = get_sub_field("details_title");
-                $detail1 = get_sub_field("detail_1");
-                $description1 = get_sub_field("description_1");
-                $detail2 = get_sub_field("detail_2");
-                $description2 = get_sub_field("description_2");
-                $detail3 = get_sub_field("detail_3");
-                $description3 = get_sub_field("description_3");
-                $detail4 = get_sub_field("detail_4");
-                $description4 = get_sub_field("description_1");
             ?>
 
         <div class="waypoint-animation">
@@ -171,10 +198,28 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1 pl-lg-0 rise-animation">
                         <?php if ($detailsTitle): ?>
-                            <h2 class="clr-gray-4 mb-5"><?php echo $detailsTitle; ?></h2>
+                            <h2 class="clr-gray-4 mb-5 h2-border-bottom"><?php echo $detailsTitle; ?></h2>
                         <?php endif; ?>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <?php elseif (get_row_layout() == "details_descriptions"): ?>
+
+        <?php
+            $detail1 = get_sub_field("detail_1");
+            $description1 = get_sub_field("description_1");
+            $detail2 = get_sub_field("detail_2");
+            $description2 = get_sub_field("description_2");
+            $detail3 = get_sub_field("detail_3");
+            $description3 = get_sub_field("description_3");
+            $detail4 = get_sub_field("detail_4");
+            $description4 = get_sub_field("description_4");
+        ?>
+
+        <div class="waypoint-animation details-description">
+            <div class="container-fluid bgc-dark">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1 rise-animation">
                         <div class="row">
