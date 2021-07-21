@@ -20,9 +20,9 @@
             <img
                 src="/future-vastgoed/wp-content/uploads/2021/07/header-overlay-mob-01.svg"
                 alt=""
-                class="header__image-overlay w-100 d-md-none"
+                class="header__image-overlay w-100 d-md-none rise-animation"
             />
-            <div class="container-fluid header-text-mobile d-md-none">
+            <div class="container-fluid header-text-mobile d-md-none rise-animation">
                 <div class="row">
                     <div class="col">
                         <div class="header__image-title">
@@ -42,10 +42,10 @@
             <img
                 src="/future-vastgoed/wp-content/uploads/2021/07/header-overlay-tablet.svg"
                 alt=""
-                class="header__image-overlay w-100 d-none d-md-block d-lg-none"
+                class="header__image-overlay w-100 d-none d-md-block d-lg-none rise-animation"
             />
             <div
-                class="container-fluid header-text-mobile d-none d-md-block d-lg-none"
+                class="container-fluid header-text-mobile d-none d-md-block d-lg-none rise-animation"
             >
                 <div class="col px-0">
                     <div class="header__image-title">
