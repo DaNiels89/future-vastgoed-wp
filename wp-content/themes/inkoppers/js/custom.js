@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	$(".categories li").click(function () {
-		var category = $(this).data("category");
+		let category = $(this).data("category");
 		console.log(category);
 
 		$(".item").hide();

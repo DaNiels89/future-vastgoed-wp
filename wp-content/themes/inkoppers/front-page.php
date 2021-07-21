@@ -12,7 +12,7 @@ get_header();
 
     $textDarkBackground = get_field("text_dark_background");
 
-    $projects = "";
+    $projectsPlaceholder = "";
 
     $titleUnderProjects = get_field("title_under_projects");
     $textUnderProjects = get_field("text_under_projects");
@@ -188,11 +188,14 @@ get_header();
         <div class="bgi-dark-overlay pt-5">
             <div class="container-fluid">
                 <div class="row rise-animation">
-                    <?php
+                    <div class="col-lg-6">
+                    </div>
+                                <?php
                         $query = new WP_Query(['post_status' => 'publish', 'post_type' => 'projects', 'orderby' => 'ID', 'order' => 'ASC']);
                         $i = 0;
                         while ($query->have_posts()) : $query->the_post();
                     ?>
+                    
                         <?php if ($i % 2 == 0): ?>
                             <div class="col-lg-5 offset-lg-1">
                         <?php elseif ($i % 2 == 1): ?>

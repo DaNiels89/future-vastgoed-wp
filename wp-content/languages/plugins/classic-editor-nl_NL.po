@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Classic Editor - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-09-13 11:10:08+0000\n"
+"PO-Revision-Date: 2021-07-20 20:02:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,80 +11,90 @@ msgstr ""
 "Language: nl\n"
 "Project-Id-Version: Plugins - Classic Editor - Stable (latest release)\n"
 
-#: classic-editor.php:822
+#: classic-editor.php:408 classic-editor.php:485 classic-editor.php:875
+msgctxt "Editor Name"
+msgid "Block editor"
+msgstr "Blok-editor"
+
+#: classic-editor.php:404 classic-editor.php:481 classic-editor.php:875
+msgctxt "Editor Name"
+msgid "Classic editor"
+msgstr "Klassieke editor"
+
+#: classic-editor.php:828
 msgctxt "Editor Name"
 msgid "Edit (classic editor)"
 msgstr "Bewerk (klassieke editor)"
 
-#: classic-editor.php:815
+#: classic-editor.php:821
 msgctxt "Editor Name"
 msgid "Edit (block editor)"
 msgstr "Bewerk (blok-editor)"
 
-#: classic-editor.php:489
+#: classic-editor.php:490
 msgid "Change settings"
 msgstr "Wijzig instellingen"
 
-#: classic-editor.php:476
+#: classic-editor.php:477
 msgid "Default editor for all sites"
 msgstr "Standaard editor voor alle sites"
 
-#: classic-editor.php:472
+#: classic-editor.php:473
 msgid "Editor Settings"
 msgstr "Editor instellingen"
 
-#: classic-editor.php:456
+#: classic-editor.php:457
 msgid "Default Editor"
 msgstr "Standaard editor"
 
-#: classic-editor.php:856
+#: classic-editor.php:862
 msgctxt "Editor Name"
 msgid "block editor"
 msgstr "Blok-editor"
 
-#: classic-editor.php:853
+#: classic-editor.php:859
 msgctxt "Editor Name"
 msgid "classic editor"
 msgstr "Klassieke editor"
 
 #. translators: %s: post title
-#: classic-editor.php:817
+#: classic-editor.php:823
 msgid "Edit &#8220;%s&#8221; in the block editor"
 msgstr "Bewerk &#8220;%s&#8221; in de blok-editor"
 
-#: classic-editor.php:657
+#: classic-editor.php:658
 msgid "Switch to block editor"
 msgstr "Wissel naar blok-editor"
 
-#: classic-editor.php:681
+#: classic-editor.php:687
 msgid "Switch to classic editor"
 msgstr "Wissel naar klassieke editor"
 
-#: classic-editor.php:493
+#: classic-editor.php:494
 msgid "By default the block editor is replaced with the classic editor and users cannot switch editors."
 msgstr "Standaard wordt de blok-editor vervangen door de klassieke editor en gebruikers kunnen niet wisselen tussen editors."
 
-#: classic-editor.php:492
+#: classic-editor.php:493
 msgid "Allow site admins to change settings"
 msgstr "Site beheerders toestaan instellingen te wijzigen"
 
-#: classic-editor.php:638
+#: classic-editor.php:639
 msgid "Editor"
 msgstr "Editor"
 
-#: classic-editor.php:431
+#: classic-editor.php:432
 msgid "No"
 msgstr "Nee"
 
-#: classic-editor.php:427
+#: classic-editor.php:428
 msgid "Yes"
 msgstr "Ja"
 
-#: classic-editor.php:354
+#: classic-editor.php:355
 msgid "Allow users to switch editors"
 msgstr "Sta gebruikers toe te wisselen tussen editors"
 
-#: classic-editor.php:353
+#: classic-editor.php:354
 msgid "Default editor for all users"
 msgstr "Standaard editor voor alle gebruikers"
 
@@ -109,10 +119,10 @@ msgid "Classic Editor"
 msgstr "Klassieke editor"
 
 #. translators: %s: post title
-#: classic-editor.php:824
+#: classic-editor.php:830
 msgid "Edit &#8220;%s&#8221; in the classic editor"
 msgstr "Bewerk &#8220;%s&#8221; in de klassieke editor"
 
-#: classic-editor.php:700
+#: classic-editor.php:706
 msgid "Settings"
 msgstr "Instellingen"
