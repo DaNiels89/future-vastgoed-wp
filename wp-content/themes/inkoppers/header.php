@@ -74,20 +74,7 @@ defined( "ABSPATH" ) || exit;
                         </a>
                     </div>
                     <div class="nav__ul-div">
-                        <ul class="nav__ul">
-                            <li class="nav__ul-li">
-                                <a href="#about-us" class="nav__ul-li-a mx-4">Over ons</a>
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#projects" class="nav__ul-li-a mx-4">Projecten</a>
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#team-div" class="nav__ul-li-a mx-4">Team</a>
-                            </li>
-                            <li class="nav__ul-li">
-                                <a href="#contact-div" class="nav__ul-li-a mx-4">Contact</a>
-                            </li>
-                        </ul>
+                        <?php wp_nav_menu(['menu' => 'Hoofdmenu', 'container' => false, 'menu_class' => false]); ?>
                     </div>
                 </div>
             </div>
