@@ -105,104 +105,106 @@
     <?php include "flexible-content.php"; ?>
 
     <!-- Contact -->
-    <div
-        tabindex="-1"
-        id="contact"
-        class="bgi-gray-dark-diagonal contact-container"
-    >
-        <!-- Mobile -->
-        <div class="container-fluid no-px-small d-lg-none">
-            <div class="row">
-                <div class="col-lg-6 bgi-contact">
-                    <div class=""></div>
-                </div>
-                <div
-                    class="
-                        col-lg-6
-                        p-lg-5
-                        d-flex
-                        flex-column
-                        justify-content-center
-                        bgc-gray-1
-                    "
-                >
+    <div class="waypoint-animation">
+        <div
+            tabindex="-1"
+            id="contact"
+            class="bgi-gray-dark-diagonal contact-container"
+        >
+            <!-- Mobile -->
+            <div class="container-fluid no-px-small d-lg-none">
+                <div class="row">
+                    <div class="col-lg-6 bgi-contact">
+                        <div class=""></div>
+                    </div>
                     <div
                         class="
-                            project-interest-div
-                            px-4 px-lg-5
+                            col-lg-6
+                            p-lg-5
                             d-flex
                             flex-column
                             justify-content-center
+                            bgc-gray-1
                         "
                     >
-                        <?php if ($contactTitle): ?>
-                            <h2 class=""><?php echo $contactTitle ?></h2>
-                        <?php endif; ?>
-                        <?php if ($contactText): ?>
-                            <p class="my-5">
-                                <?php echo $contactText; ?>
-                            </p>
-                        <?php endif; ?>
-                        <div class="d-flex">
-                            <a
-                                href="tel:<?php echo $phoneNumber; ?>"
-                                class="a-btn a-btn-dark rounded-pill mr-4"
-                                >Bel ons</a
-                            >
-                            <a
-                                href="mailto:<?php echo $emailAddress ?>"
-                                class="a-btn a-btn-dark rounded-pill"
-                                >Mail ons</a
-                            >
+                        <div
+                            class="
+                                project-interest-div
+                                px-4 px-lg-5
+                                d-flex
+                                flex-column
+                                justify-content-center
+                            "
+                        >
+                            <?php if ($contactTitle): ?>
+                                <h2 class=""><?php echo $contactTitle ?></h2>
+                            <?php endif; ?>
+                            <?php if ($contactText): ?>
+                                <p class="my-5">
+                                    <?php echo $contactText; ?>
+                                </p>
+                            <?php endif; ?>
+                            <div class="d-flex">
+                                <a
+                                    href="tel:<?php echo $phoneNumber; ?>"
+                                    class="a-btn a-btn-dark rounded-pill mr-4"
+                                    >Bel ons</a
+                                >
+                                <a
+                                    href="mailto:<?php echo $emailAddress ?>"
+                                    class="a-btn a-btn-dark rounded-pill"
+                                    >Mail ons</a
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Desktop -->
-        <div class="container-fluid interesse-div d-none d-lg-block">
-            <div class="row mx-0">
-                <div class="col-lg-6 bgi-contact">
-                    <div class=""></div>
-                </div>
-                <div
-                    class="
-                        col-lg-6
-                        p-lg-5
-                        d-flex
-                        flex-column
-                        justify-content-center
-                        bgc-gray-1
-                    "
-                >
+            <!-- Desktop -->
+            <div class="container-fluid interesse-div d-none d-lg-block rise-animation">
+                <div class="row mx-0">
+                    <div class="col-lg-6 bgi-contact">
+                        <div class=""></div>
+                    </div>
                     <div
                         class="
-                            project-interest-div
-                            px-4 px-lg-5
+                            col-lg-6
+                            p-lg-5
                             d-flex
                             flex-column
                             justify-content-center
+                            bgc-gray-1
                         "
                     >
-                        <?php if ($contactTitle): ?>
-                            <h2 class=""><?php echo $contactTitle ?></h2>
-                        <?php endif; ?>
-                        <?php if ($contactText): ?>
-                            <p class="my-5">
-                                <?php echo $contactText; ?>
-                            </p>
-                        <?php endif; ?>
-                        <div class="d-flex">
-                            <a
-                                href="tel:<?php echo $phoneNumber; ?>"
-                                class="a-btn a-btn-dark rounded-pill mr-4"
-                                >Bel ons</a
-                            >
-                            <a
-                                href="mailto:<?php echo $emailAddress ?>"
-                                class="a-btn a-btn-dark rounded-pill"
-                                >Mail ons</a
-                            >
+                        <div
+                            class="
+                                project-interest-div
+                                px-4 px-lg-5
+                                d-flex
+                                flex-column
+                                justify-content-center
+                            "
+                        >
+                            <?php if ($contactTitle): ?>
+                                <h2 class=""><?php echo $contactTitle ?></h2>
+                            <?php endif; ?>
+                            <?php if ($contactText): ?>
+                                <p class="my-5">
+                                    <?php echo $contactText; ?>
+                                </p>
+                            <?php endif; ?>
+                            <div class="d-flex">
+                                <a
+                                    href="tel:<?php echo $phoneNumber; ?>"
+                                    class="a-btn a-btn-dark rounded-pill mr-4"
+                                    >Bel ons</a
+                                >
+                                <a
+                                    href="mailto:<?php echo $emailAddress ?>"
+                                    class="a-btn a-btn-dark rounded-pill"
+                                    >Mail ons</a
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>

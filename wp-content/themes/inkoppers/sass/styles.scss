@@ -667,6 +667,22 @@ header {
 // Footer
 
 footer {
+	& address {
+		& p {
+			font-size: 1.333rem;
+			min-height: 0.00001vw;
+			font-size: $clamp2030;
+			margin-bottom: 0;
+			color: $clr-light;
+			font-weight: $fw-extra-light;
+		}
+		& a {
+			font-size: 1.333rem;
+			min-height: 0.00001vw;
+			font-size: $clamp2030;
+			color: $clr-light;
+		}
+	}
 	& a {
 		transition: color 0.3s;
 		&.footer-a-light {
