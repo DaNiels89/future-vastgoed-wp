@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-lg-6 offset-lg-3 rise-animation-alt">
                                 <img
-                                    src="<?php echo $imgDarkBG['sizes']['large']; ?>"
+                                    src="<?php echo $imgDarkBG['sizes']['img-partly-dark-background']; ?>"
                                     alt="<?php echo $imgDarkBG["alt"]; ?>"
                                     class="pb-5 mb-lg-5 w-100"
                                 />
@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="col rise-animation-alt">
                             <img
-                                src="<?php echo $singleImage['sizes']['large']; ?>"
+                                src="<?php echo $singleImage['sizes']['img-full-width']; ?>"
                                 alt="<?php echo $singleImage['alt']; ?>"
                                 class="w-100"
                             />
@@ -107,7 +107,7 @@
             <!-- Mobile image without padding -->
             <div class="waypoint-animation">
                 <img
-                    src="<?php echo $imgNoPaddingMobile['sizes']['large']; ?>"
+                    src="<?php echo $imgNoPaddingMobile['sizes']['img-full-width']; ?>"
                     alt="<?php echo $imgNoPaddingMobile['alt']; ?>"
                     class="d-lg-none w-100 rise-animation"
                 />
@@ -119,7 +119,7 @@
                     <div class="row">
                         <div class="col rise-animation">
                             <img
-                                src="<?php echo $imgNoPaddingMobile['sizes']['large']; ?>"
+                                src="<?php echo $imgNoPaddingMobile['sizes']['img-full-width']; ?>"
                                 alt="<?php echo $imgNoPaddingMobile['alt']; ?>"
                                 class="w-100"
                             />
@@ -144,7 +144,7 @@
                         <div class="col-lg-6 slide-right-animation">
                             <div class="position-relative my-4 my-lg-0">
                                 <img 
-                                    src="<?php echo $imageLeft['sizes']['large']; ?>"
+                                    src="<?php echo $imageLeft['sizes']['two-images']; ?>"
                                     alt="<?php echo $imageLeft['alt']; ?>"
                                     class="w-100">
                                 <?php if ($imageLeftText): ?>
@@ -165,7 +165,7 @@
                         <div class="col-lg-6 slide-left-animation">
                             <div class="position-relative my-4 my-lg-0">
                                 <img 
-                                    src="<?php echo $imageRight['sizes']['large']; ?>"
+                                    src="<?php echo $imageRight['sizes']['two-images']; ?>"
                                     alt="<?php echo $imageRight['alt']; ?>"
                                     class="w-100">
                                 <?php if ($imageLeftText): ?>
@@ -196,7 +196,7 @@
         <div class="waypoint-animation">
             <div class="container-fluid project-details-div bgc-dark">
                 <div class="row">
-                    <div class="col-lg-10 offset-lg-1 pl-lg-0 rise-animation">
+                    <div class="col-lg-10 offset-lg-1 px-lg-0 rise-animation">
                         <?php if ($detailsTitle): ?>
                             <h2 class="clr-gray-4 mb-5 h2-border-bottom"><?php echo $detailsTitle; ?></h2>
                         <?php endif; ?>
@@ -218,7 +218,7 @@
             $description4 = get_sub_field("description_4");
         ?>
 
-        <div class="waypoint-animation details-description">
+        <div class="waypoint-animation">
             <div class="container-fluid bgc-dark">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1 rise-animation">

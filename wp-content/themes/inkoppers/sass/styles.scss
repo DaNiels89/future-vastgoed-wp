@@ -706,15 +706,6 @@ footer {
 	margin-top: 4em;
 }
 
-.main-header {
-	.details-description {
-		&:last-child {
-			margin-bottom: 6em;
-			background-color: red;
-		}
-	}
-}
-
 .title-left-text-right {
 	margin: 4em 0;
 }
@@ -840,15 +831,6 @@ footer {
 		// padding-bottom: 16em;
 		margin-top: 16em;
 		// transform: translateY(1px);
-	}
-
-	.main-header {
-		.details-description {
-			&:last-child {
-				margin-bottom: 16em;
-				background-color: red;
-			}
-		}
 	}
 
 	.bgi-project {

@@ -48,3 +48,9 @@ function wpharvest_yoasttobottom()
 }
 
 add_filter("wpseo_metabox_prio", "wpharvest_yoasttobottom");
+
+add_image_size("main-img", 1920, 1080, ["center", "center"]);
+add_image_size("img-partly-dark-background", 1056, 1200, ["center", "center"]);
+add_image_size("img-full-width", 1780, 1000, ["center", "center"]);
+add_image_size("two-images", 875, 1000, ["center", "center"]);
+add_image_size("contact-img", 875, 657, ["center", "center"]);
